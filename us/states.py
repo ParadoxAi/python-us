@@ -93,7 +93,7 @@ def lookup(val, field: Optional[str] = None, use_cache: bool = True) -> Optional
             val = val.upper()
             field = "abbr"
         else:
-            val = jellyfish.metaphone(val)
+            val = jellyfish.metaphone(str(val))
             field = "name_metaphone"
 
     # see if result is in cache
